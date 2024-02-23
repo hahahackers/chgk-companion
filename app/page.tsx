@@ -14,7 +14,10 @@ export default function Home() {
 
   async function handleClick() {
     const response = await fetch(
-      `http://www.db.chgk.info/tours/${value}/questions?page=1&itemsPerPage=100`
+      `http://www.db.chgk.info/tours/${value}/questions?page=1&itemsPerPage=100`,
+      {
+        mode: 'cors',
+      }
     );
 
     const json = await response.json();
