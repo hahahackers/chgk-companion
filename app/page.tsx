@@ -14,10 +14,7 @@ export default function Home() {
 
   async function handleClick() {
     const response = await fetch(
-      `http://www.db.chgk.info/tours/${value}/questions?page=1&itemsPerPage=100`,
-      {
-        mode: 'cors',
-      }
+      `https://hpdykjgao2nj5wwgut62cvmeve0derht.lambda-url.eu-central-1.on.aws/${value}`
     );
 
     const json = await response.json();
